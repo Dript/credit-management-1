@@ -20,3 +20,17 @@ class transaction(models.Model):
 
 	def __str__(self):
 		return self.trac_from
+
+class emp_detail(models.Model):
+	name=models.CharField(max_length=32)
+	email=models.CharField(max_length=30)
+	phone=models.IntegerField()
+	age=models.IntegerField()
+	gender=models.CharField(max_length=6)
+	salary=models.IntegerField( )
+	attach=models.IntegerField( )
+	ProfilePicURL=models.CharField(max_length=200)
+	position=models.CharField(max_length=20)
+	
+	def __str__(self):
+		return self.name + self.position
